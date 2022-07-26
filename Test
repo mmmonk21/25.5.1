@@ -18,9 +18,9 @@ def testing():
 # Тест на проверку авторизации на сайте
 def test_show_my_pet():
     # Авторизация и вход на страницу моих питомцев
-    pytest.driver.find_element_by_id('email').send_keys('Antaresstar86@yandex.ru')
+    pytest.driver.find_element_by_id('email').send_keys('alekceevanton.08@mail.ru')
     # Вводим e-mail
-    pytest.driver.find_element_by_id('pass').send_keys('091086')
+    pytest.driver.find_element_by_id('pass').send_keys('123456')
     # Вводим пароль
     pytest.driver.find_element_by_css_selector('html > body > div > div > form > div:nth-of-type(3) > button').click()
     # Нажимаем кнопку входа в аккаунт
@@ -30,8 +30,8 @@ def test_show_my_pet():
 # Тест на определение количества питомцев
 def test_count_my_pets():
     # Авторизовываемся на странице
-    pytest.driver.find_element_by_id('email').send_keys('Antaresstar86@yandex.ru')
-    pytest.driver.find_element_by_id('pass').send_keys('091086')
+    pytest.driver.find_element_by_id('email').send_keys('alekceevanton.08@mail.ru')
+    pytest.driver.find_element_by_id('pass').send_keys('123456')
     pytest.driver.find_element_by_css_selector('html > body > div > div > form > div:nth-of-type(3) > button').click()
     WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "card-deck")))
     assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
@@ -49,8 +49,8 @@ def test_count_my_pets():
 # Тест на определение уникальности имён питомцев.
 def test_my_pets_with_uniq_names():
     # Авторизовываемся на странице
-    pytest.driver.find_element_by_id('email').send_keys('Antaresstar86@yandex.ru')
-    pytest.driver.find_element_by_id('pass').send_keys('091086')
+    pytest.driver.find_element_by_id('email').send_keys('alekceevanton.08@mail.ru')
+    pytest.driver.find_element_by_id('pass').send_keys('123456')
     pytest.driver.find_element_by_css_selector('html > body > div > div > form > div:nth-of-type(3) > button').click()
     WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "card-deck")))
     assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
@@ -70,8 +70,8 @@ def test_my_pets_with_uniq_names():
 # Проверка параметров карточек питомцев на главной странице сайта:
 def test_card_my_pets():
     # Авторизовываемся на странице
-    pytest.driver.find_element_by_id('email').send_keys('Antaresstar86@yandex.ru')
-    pytest.driver.find_element_by_id('pass').send_keys('091086')
+    pytest.driver.find_element_by_id('email').send_keys('alekceevanton.08@mail.ru')
+    pytest.driver.find_element_by_id('pass').send_keys('123456')
     pytest.driver.find_element_by_css_selector('html > body > div > div > form > div:nth-of-type(3) > button').click()
     WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "card-deck")))
     assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
@@ -92,8 +92,8 @@ def test_card_my_pets():
 # Проверка что у всех моих питомцев есть фото.
 def test_all_my_pets_have_photo():
     # Авторизовываемся на странице
-    pytest.driver.find_element_by_id('email').send_keys('Antaresstar86@yandex.ru')
-    pytest.driver.find_element_by_id('pass').send_keys('091086')
+    pytest.driver.find_element_by_id('email').send_keys('alekceevanton.08@mail.ru')
+    pytest.driver.find_element_by_id('pass').send_keys('123456')
     pytest.driver.find_element_by_css_selector('html > body > div > div > form > div:nth-of-type(3) > button').click()
     WebDriverWait(pytest.driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "card-deck")))
     assert pytest.driver.find_element_by_tag_name('h1').text == "PetFriends"
